@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23F4D44D1D13E64A001FAF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4D44C1D13E64A001FAF0F /* AppDelegate.swift */; };
+		23F4D44F1D13E64A001FAF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F4D44E1D13E64A001FAF0F /* Assets.xcassets */; };
+		23F4D4521D13E64A001FAF0F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F4D4501D13E64A001FAF0F /* MainMenu.xib */; };
+		23F4D45D1D13E64A001FAF0F /* dockermenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4D45C1D13E64A001FAF0F /* dockermenuTests.swift */; };
+		23F4D4681D13E64A001FAF0F /* dockermenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4D4671D13E64A001FAF0F /* dockermenuUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23F4D4591D13E64A001FAF0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23F4D4411D13E649001FAF0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23F4D4481D13E64A001FAF0F;
+			remoteInfo = dockermenu;
+		};
+		23F4D4641D13E64A001FAF0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23F4D4411D13E649001FAF0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23F4D4481D13E64A001FAF0F;
+			remoteInfo = dockermenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23F4D4491D13E64A001FAF0F /* dockermenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dockermenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F4D44C1D13E64A001FAF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23F4D44E1D13E64A001FAF0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23F4D4511D13E64A001FAF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		23F4D4531D13E64A001FAF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F4D4581D13E64A001FAF0F /* dockermenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dockermenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F4D45C1D13E64A001FAF0F /* dockermenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dockermenuTests.swift; sourceTree = "<group>"; };
+		23F4D45E1D13E64A001FAF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F4D4631D13E64A001FAF0F /* dockermenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dockermenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F4D4671D13E64A001FAF0F /* dockermenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dockermenuUITests.swift; sourceTree = "<group>"; };
+		23F4D4691D13E64A001FAF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23F4D4461D13E64A001FAF0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F4D4551D13E64A001FAF0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F4D4601D13E64A001FAF0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23F4D4401D13E649001FAF0F = {
+			isa = PBXGroup;
+			children = (
+				23F4D44B1D13E64A001FAF0F /* dockermenu */,
+				23F4D45B1D13E64A001FAF0F /* dockermenuTests */,
+				23F4D4661D13E64A001FAF0F /* dockermenuUITests */,
+				23F4D44A1D13E64A001FAF0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23F4D44A1D13E64A001FAF0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23F4D4491D13E64A001FAF0F /* dockermenu.app */,
+				23F4D4581D13E64A001FAF0F /* dockermenuTests.xctest */,
+				23F4D4631D13E64A001FAF0F /* dockermenuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23F4D44B1D13E64A001FAF0F /* dockermenu */ = {
+			isa = PBXGroup;
+			children = (
+				23F4D44C1D13E64A001FAF0F /* AppDelegate.swift */,
+				23F4D44E1D13E64A001FAF0F /* Assets.xcassets */,
+				23F4D4501D13E64A001FAF0F /* MainMenu.xib */,
+				23F4D4531D13E64A001FAF0F /* Info.plist */,
+			);
+			path = dockermenu;
+			sourceTree = "<group>";
+		};
+		23F4D45B1D13E64A001FAF0F /* dockermenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				23F4D45C1D13E64A001FAF0F /* dockermenuTests.swift */,
+				23F4D45E1D13E64A001FAF0F /* Info.plist */,
+			);
+			path = dockermenuTests;
+			sourceTree = "<group>";
+		};
+		23F4D4661D13E64A001FAF0F /* dockermenuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				23F4D4671D13E64A001FAF0F /* dockermenuUITests.swift */,
+				23F4D4691D13E64A001FAF0F /* Info.plist */,
+			);
+			path = dockermenuUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23F4D4481D13E64A001FAF0F /* dockermenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F4D46C1D13E64A001FAF0F /* Build configuration list for PBXNativeTarget "dockermenu" */;
+			buildPhases = (
+				23F4D4451D13E64A001FAF0F /* Sources */,
+				23F4D4461D13E64A001FAF0F /* Frameworks */,
+				23F4D4471D13E64A001FAF0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dockermenu;
+			productName = dockermenu;
+			productReference = 23F4D4491D13E64A001FAF0F /* dockermenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23F4D4571D13E64A001FAF0F /* dockermenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F4D46F1D13E64A001FAF0F /* Build configuration list for PBXNativeTarget "dockermenuTests" */;
+			buildPhases = (
+				23F4D4541D13E64A001FAF0F /* Sources */,
+				23F4D4551D13E64A001FAF0F /* Frameworks */,
+				23F4D4561D13E64A001FAF0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23F4D45A1D13E64A001FAF0F /* PBXTargetDependency */,
+			);
+			name = dockermenuTests;
+			productName = dockermenuTests;
+			productReference = 23F4D4581D13E64A001FAF0F /* dockermenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23F4D4621D13E64A001FAF0F /* dockermenuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F4D4721D13E64A001FAF0F /* Build configuration list for PBXNativeTarget "dockermenuUITests" */;
+			buildPhases = (
+				23F4D45F1D13E64A001FAF0F /* Sources */,
+				23F4D4601D13E64A001FAF0F /* Frameworks */,
+				23F4D4611D13E64A001FAF0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23F4D4651D13E64A001FAF0F /* PBXTargetDependency */,
+			);
+			name = dockermenuUITests;
+			productName = dockermenuUITests;
+			productReference = 23F4D4631D13E64A001FAF0F /* dockermenuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23F4D4411D13E649001FAF0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Joel Carlbark";
+				TargetAttributes = {
+					23F4D4481D13E64A001FAF0F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					23F4D4571D13E64A001FAF0F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 23F4D4481D13E64A001FAF0F;
+					};
+					23F4D4621D13E64A001FAF0F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 23F4D4481D13E64A001FAF0F;
+					};
+				};
+			};
+			buildConfigurationList = 23F4D4441D13E64A001FAF0F /* Build configuration list for PBXProject "dockermenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23F4D4401D13E649001FAF0F;
+			productRefGroup = 23F4D44A1D13E64A001FAF0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23F4D4481D13E64A001FAF0F /* dockermenu */,
+				23F4D4571D13E64A001FAF0F /* dockermenuTests */,
+				23F4D4621D13E64A001FAF0F /* dockermenuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23F4D4471D13E64A001FAF0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F4D44F1D13E64A001FAF0F /* Assets.xcassets in Resources */,
+				23F4D4521D13E64A001FAF0F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F4D4561D13E64A001FAF0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F4D4611D13E64A001FAF0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23F4D4451D13E64A001FAF0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F4D44D1D13E64A001FAF0F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F4D4541D13E64A001FAF0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F4D45D1D13E64A001FAF0F /* dockermenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F4D45F1D13E64A001FAF0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F4D4681D13E64A001FAF0F /* dockermenuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23F4D45A1D13E64A001FAF0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23F4D4481D13E64A001FAF0F /* dockermenu */;
+			targetProxy = 23F4D4591D13E64A001FAF0F /* PBXContainerItemProxy */;
+		};
+		23F4D4651D13E64A001FAF0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23F4D4481D13E64A001FAF0F /* dockermenu */;
+			targetProxy = 23F4D4641D13E64A001FAF0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23F4D4501D13E64A001FAF0F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23F4D4511D13E64A001FAF0F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23F4D46A1D13E64A001FAF0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23F4D46B1D13E64A001FAF0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		23F4D46D1D13E64A001FAF0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = dockermenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vorce.dockermenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		23F4D46E1D13E64A001FAF0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = dockermenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vorce.dockermenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		23F4D4701D13E64A001FAF0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = dockermenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vorce.dockermenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dockermenu.app/Contents/MacOS/dockermenu";
+			};
+			name = Debug;
+		};
+		23F4D4711D13E64A001FAF0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = dockermenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vorce.dockermenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dockermenu.app/Contents/MacOS/dockermenu";
+			};
+			name = Release;
+		};
+		23F4D4731D13E64A001FAF0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = dockermenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vorce.dockermenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = dockermenu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		23F4D4741D13E64A001FAF0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = dockermenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vorce.dockermenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = dockermenu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23F4D4441D13E64A001FAF0F /* Build configuration list for PBXProject "dockermenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F4D46A1D13E64A001FAF0F /* Debug */,
+				23F4D46B1D13E64A001FAF0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23F4D46C1D13E64A001FAF0F /* Build configuration list for PBXNativeTarget "dockermenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F4D46D1D13E64A001FAF0F /* Debug */,
+				23F4D46E1D13E64A001FAF0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		23F4D46F1D13E64A001FAF0F /* Build configuration list for PBXNativeTarget "dockermenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F4D4701D13E64A001FAF0F /* Debug */,
+				23F4D4711D13E64A001FAF0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		23F4D4721D13E64A001FAF0F /* Build configuration list for PBXNativeTarget "dockermenuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F4D4731D13E64A001FAF0F /* Debug */,
+				23F4D4741D13E64A001FAF0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23F4D4411D13E649001FAF0F /* Project object */;
+}

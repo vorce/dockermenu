@@ -4,7 +4,7 @@ A small application for your mac os x menu bar that lists all running docker con
 Made because I kept leaving a bunch of running stuff on my old macbook which made all
 resources go poof. :fire:
 
-[dockermenu screenshot](screenshot.png)
+![dockermenu screenshot](screenshot.png)
 
 Clicking an item in the menu will stop that particular container.
 

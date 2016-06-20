@@ -16,7 +16,7 @@ I have docker-machine version: 0.7.0, docker version 1.11.2.
 
 Currently dockermenu will try to use the settings from `docker-machine env default` - if your environment is called something else you will have to change it in the code. This is something I'd like to fix eventually.
 
-Dockermenu has not been tested with "Docker for mac" (currently beta at https://beta.docker.com/)
+Dockermenu has not been tested with "Docker for mac" (currently beta at https://www.docker.com/products/docker#/mac)
 
 This is my very first Swift experiment, and it was conceived during two afternoons and with a lot of google. => lol code.
 

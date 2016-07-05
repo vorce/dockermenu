@@ -11,7 +11,8 @@ import Foundation
 class Docker {
     init() {
         setenv("PATH", "/usr/local/bin/", 1) // Needed by docker-machine, to know where VBoxManage is
-        dockerEnv()
+        // TODO: Run this if docker toolbox is used, but not for Docker for Mac.
+        // dockerEnv()
     }
     
     /* Parse output from "docker-machine env default" into something we can do setenv on.

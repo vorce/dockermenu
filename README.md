@@ -14,7 +14,7 @@ Dockermenu has only been tested on my local machine running Mac OS X El Capitan.
 
 I have docker-machine version: 0.7.0, docker version 1.11.2.
 
-Currently dockermenu will try to use the settings from `docker-machine env default` - if your environment is called something else you will have to change it in the code. This is something I'd like to fix eventually.
+Currently dockermenu will try to use the settings from `docker-machine env default` - if your environment is called something else you will have to change it in the code. This is something I'd like to fix eventually. Also if your docker-machine was not started before dockermenu was, it will not work - again something I'd like to fix.
 
 Dockermenu has not been tested with "Docker for mac" (currently beta at https://www.docker.com/products/docker#/mac)
 

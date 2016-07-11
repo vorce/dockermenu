@@ -20,3 +20,13 @@ Dockermenu has not been tested with "Docker for mac" (currently beta at https://
 
 This is my very first Swift experiment, and it was conceived during two afternoons and with a lot of google. => lol code.
 
+## Build and run
+
+I have yet to publish this to the App store (or anywhere else really) - so you need to build this yourself. Here's how:
+
+1. Open the project in Xcode
+2. Click on the `Product` -> `Archive` menu item
+3. Click "Export..."
+4. Chose "Export as a Mac Application"
+
+This should generate a `dockermnu.app` ready to be run.

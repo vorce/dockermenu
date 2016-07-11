@@ -12,11 +12,12 @@ Clicking an item in the menu will stop that particular container.
 
 Dockermenu has only been tested on my local machine running Mac OS X El Capitan.
 
-I have docker-machine version: 0.7.0, docker version 1.11.2.
+Tested with these docker versions:
 
-Currently dockermenu will try to use the settings from `docker-machine env default` - if your environment is called something else you will have to change it in the code. This is something I'd like to fix eventually. Also if your docker-machine was not started before dockermenu was, it will not work - again something I'd like to fix.
+    Docker version 1.12.0-rc2, build 906eacd, experimental
+    docker-machine version 0.8.0-rc1, build fffa6c9
 
-Dockermenu has not been tested with "Docker for mac" (currently beta at https://www.docker.com/products/docker#/mac)
+Dockermenu has been tested with "Docker for mac": https://docs.docker.com/docker-for-mac/
 
 This is my very first Swift experiment, and it was conceived during two afternoons and with a lot of google. => lol code.
 

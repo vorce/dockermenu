@@ -11,24 +11,24 @@ import Cocoa
 class StatusMenuController: NSObject {
     @IBOutlet weak var statusMenu: NSMenu!
     
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let dockerApi = Docker()
     
     override func awakeFromNib() {
         let icon = NSImage(named: "IconSet")
-        icon?.template = true
+        icon?.isTemplate = true
         
         statusItem.image = icon
         statusItem.menu = statusMenu
         
-        NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("dockerPs"), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(StatusMenuController.dockerPs), userInfo: nil, repeats: true)
 
         debugPrint(dockerApi.dockerImages())
         addMenuItems(dockerApi.dockerImages())
     }
     
-    @IBAction func quitClicked(sender: NSMenuItem) {
-        NSApplication.sharedApplication().terminate(self)
+    @IBAction func quitClicked(_ sender: NSMenuItem) {
+        NSApplication.shared().terminate(self)
     }
     
     func dockerPs() {
@@ -38,42 +38,42 @@ class StatusMenuController: NSObject {
         addMenuItems(images)
     }
     
-    @IBAction func stopAllClicked(sender: NSMenuItem) {
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+    @IBAction func stopAllClicked(_ sender: NSMenuItem) {
+        let priority = DispatchQueue.GlobalQueuePriority.default
+        DispatchQueue.global(priority: priority).async {
             self.dockerApi.stopAll(self.dockerApi.dockerImages())
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.removeAllImageItems()
             }
         }
     }
     
     func removeAllImageItems() {
-        let menuItems = statusItem.menu!.itemArray
+        let menuItems = statusItem.menu!.items
         for item in menuItems {
-            if(item.action.description.containsString("stopImage")) {
+            if(item.action?.description.contains("stopImage"))! {
                 debugPrint("Removing item from menu: " + item.description)
                 statusItem.menu?.removeItem(item)
             }
         }
     }
     
-    @IBAction func stopImage(sender: NSMenuItem) {
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+    @IBAction func stopImage(_ sender: NSMenuItem) {
+        let priority = DispatchQueue.GlobalQueuePriority.default
+        DispatchQueue.global(priority: priority).async {
             let containerId = sender.representedObject as! String
             self.dockerApi.stopContainer(containerId)
-            dispatch_async(dispatch_get_main_queue()) {
-                if(self.statusItem.menu!.itemArray.contains(sender)) {
+            DispatchQueue.main.async {
+                if(self.statusItem.menu!.items.contains(sender)) {
                     self.statusItem.menu?.removeItem(sender)
                 }
             }
         }
     }
     
-    func addMenuItems(images: [DockerImage]) {
+    func addMenuItems(_ images: [DockerImage]) {
         images.forEach  { (image: DockerImage) -> () in
-            let newItem : NSMenuItem = NSMenuItem(title: image.name, action: Selector("stopImage:"), keyEquivalent: "")
+            let newItem : NSMenuItem = NSMenuItem(title: image.name, action: #selector(StatusMenuController.stopImage(_:)), keyEquivalent: "")
             newItem.representedObject = image.containerId
             newItem.target = self
             statusItem.menu!.addItem(newItem)

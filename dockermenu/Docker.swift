@@ -19,8 +19,8 @@ class Docker {
         TODO: Make "default" configurable
     */
     func dockerEnv() {
-        let task = NSTask()
-        let pipe = NSPipe()
+        let task = Process()
+        let pipe = Pipe()
         
         task.launchPath = "/usr/local/bin/docker-machine"
         task.arguments = ["env", "default"]
@@ -29,17 +29,17 @@ class Docker {
         
         let handle = pipe.fileHandleForReading
         let data = handle.readDataToEndOfFile()
-        let result = NSString(data: data, encoding: NSUTF8StringEncoding)
-        let lines = result!.componentsSeparatedByString("\n")
+        let result = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+        let lines = result!.components(separatedBy: "\n")
         let exportLines = lines.filter {$0 != "" }.filter { (line:String) -> Bool in
-            line.containsString("export DOCKER")
+            line.contains("export DOCKER")
         }
         
         let vars = exportLines.map { (line:String) -> EnvironmentVariable in
-            let parts = line.componentsSeparatedByString(" ")
-            let env = parts[1].componentsSeparatedByString("=")
+            let parts = line.components(separatedBy: " ")
+            let env = parts[1].components(separatedBy: "=")
             return EnvironmentVariable(name: env[0],
-                value: env[1].stringByReplacingOccurrencesOfString("\"", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil))
+                value: env[1].replacingOccurrences(of: "\"", with: "", options: NSString.CompareOptions.literal, range: nil))
         }
         
         vars.forEach{ (ev: EnvironmentVariable) -> () in
@@ -49,8 +49,8 @@ class Docker {
     }
     
     func dockerImages() -> [DockerImage] {
-        let task = NSTask()
-        let pipe = NSPipe()
+        let task = Process()
+        let pipe = Pipe()
         
         task.launchPath = "/usr/local/bin/docker"
         task.arguments = ["ps"]
@@ -59,32 +59,32 @@ class Docker {
         
         let handle = pipe.fileHandleForReading
         let data = handle.readDataToEndOfFile()
-        let result = NSString(data: data, encoding: NSUTF8StringEncoding)
-        return parseDockerPs(result as! String).sort({ (a:DockerImage, b:DockerImage) -> Bool in
+        let result = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+        return parseDockerPs(result as! String).sorted(by: { (a:DockerImage, b:DockerImage) -> Bool in
             a.name < b.name
         })
     }
     
-    func parseDockerPs(dockerPsOutput : String) -> [DockerImage] {
-        let lines = dockerPsOutput.componentsSeparatedByString("\n")
+    func parseDockerPs(_ dockerPsOutput : String) -> [DockerImage] {
+        let lines = dockerPsOutput.components(separatedBy: "\n")
         return lines.filter{ $0 != "" }.dropFirst().map { (line:String) -> DockerImage in
-            let parts = line.componentsSeparatedByString(" ").filter {
+            let parts = line.components(separatedBy: " ").filter {
                 $0 != ""
             }
             return DockerImage(name: parts[1], containerId: parts[0])
         }
     }
     
-    func stopAll(images: [DockerImage]) {
+    func stopAll(_ images: [DockerImage]) {
         debugPrint("Stopping all containers")
         images.forEach  { (image: DockerImage) -> () in
             stopContainer(image.containerId)
         }
     }
     
-    func stopContainer(containerId: String) {
+    func stopContainer(_ containerId: String) {
         debugPrint("Trying to stop container with id: " + containerId)
-        let task = NSTask()
+        let task = Process()
         task.launchPath = "/usr/local/bin/docker"
         task.arguments = ["stop", containerId]
         task.launch()

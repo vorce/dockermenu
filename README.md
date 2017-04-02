@@ -8,14 +8,18 @@ resources go poof. :fire:
 
 Clicking an item in the menu will stop that particular container.
 
+## Installation
+
+You can either build it yourself (see section further down). Or download
+the zip archive from [releases](/releases) and run `dockermenu.app`.
+
 ## Limitations
 
-Dockermenu has only been tested on my local machine running Mac OS X El Capitan.
+Dockermenu has only been tested on my local machine running Mac OS X El Capitan, and macOS Sierra.
 
-Tested with these docker versions:
+Tested with this docker version:
 
-    Docker version 1.12.0-rc2, build 906eacd, experimental
-    docker-machine version 0.8.0-rc1, build fffa6c9
+	Docker version 17.03.1-ce, build c6d412e
 
 Dockermenu has been tested with "Docker for mac": https://docs.docker.com/docker-for-mac/
 
@@ -23,11 +27,9 @@ This is my very first Swift experiment, and it was conceived during two afternoo
 
 ## Build and run
 
-I have yet to publish this to the App store (or anywhere else really) - so you need to build this yourself. Here's how:
-
 1. Open the project in Xcode
 2. Click on the `Product` -> `Archive` menu item
 3. Click "Export..."
 4. Chose "Export as a Mac Application"
 
-This should generate a `dockermnu.app` ready to be run.
+This should generate a `dockermenu.app` ready to be run.

@@ -1,7 +1,5 @@
 # Dockermenu
 
-**Note:** Dockermenu seems to crash after a few seconds. I will look into it asap :(
-
 A small application for your mac os x menu bar that lists all running docker containers.
 Made because I kept leaving a bunch of running stuff on my old macbook which made all
 resources go poof. :fire:

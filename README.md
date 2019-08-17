@@ -8,22 +8,14 @@ resources go poof. :fire:
 
 Clicking an item in the menu will stop that particular container.
 
+This is my very first Swift experiment, and it was conceived during two afternoons and with a lot of google. => lol code. 
+
+The project has not been updated in a long time, but it's not dead - I use it every day but haven't seen a need for changing anything.
+
 ## Installation
 
-You can either build it yourself (see section further down). Or download
+You can either build it yourself (see details further down). Or download
 the zip archive from [releases](/releases) and run `dockermenu.app`.
-
-## Limitations
-
-Dockermenu has only been tested on my local machine running Mac OS X El Capitan, and macOS Sierra.
-
-Tested with this docker version:
-
-	Docker version 17.03.1-ce, build c6d412e
-
-Dockermenu has been tested with "Docker for mac": https://docs.docker.com/docker-for-mac/
-
-This is my very first Swift experiment, and it was conceived during two afternoons and with a lot of google. => lol code.
 
 ## Build and run
 
@@ -33,3 +25,16 @@ This is my very first Swift experiment, and it was conceived during two afternoo
 4. Chose "Export as a Mac Application"
 
 This should generate a `dockermenu.app` ready to be run.
+
+## Known compatibilities
+
+Dockermenu has been tested on my local machine running Mac OS X El Capitan, macOS Sierra, and macOS Mojave.
+
+Tested with these docker versions:
+
+- Docker version 17.03.1-ce, build c6d412e
+- Docker version 19.03.1, build 74b1e89
+
+Using "Docker for mac": https://docs.docker.com/docker-for-mac/
+
+

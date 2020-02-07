@@ -34,6 +34,7 @@ Tested with these docker versions:
 
 - Docker version 17.03.1-ce, build c6d412e
 - Docker version 19.03.1, build 74b1e89
+- Docker version 19.03.5, build 633a0ea
 
 
 Using "Docker for mac": https://docs.docker.com/docker-for-mac/

@@ -28,12 +28,13 @@ This should generate a `dockermenu.app` ready to be run.
 
 ## Known compatibilities
 
-Dockermenu has been tested on my local machine running Mac OS X El Capitan, macOS Sierra, and macOS Mojave.
+Dockermenu has been tested on my local machine running Mac OS X El Capitan, macOS Sierra, macOS Mojave, and maOS Catalina.
 
 Tested with these docker versions:
 
 - Docker version 17.03.1-ce, build c6d412e
 - Docker version 19.03.1, build 74b1e89
+
 
 Using "Docker for mac": https://docs.docker.com/docker-for-mac/
 

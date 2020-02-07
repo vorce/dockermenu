@@ -60,7 +60,7 @@ class Docker {
         let handle = pipe.fileHandleForReading
         let data = handle.readDataToEndOfFile()
         let result = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-        return parseDockerPs(result as! String).sorted(by: { (a:DockerImage, b:DockerImage) -> Bool in
+        return parseDockerPs(result! as String).sorted(by: { (a:DockerImage, b:DockerImage) -> Bool in
             a.name < b.name
         })
     }

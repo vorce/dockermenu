@@ -11,7 +11,7 @@ import Cocoa
 class StatusMenuController: NSObject {
     @IBOutlet weak var statusMenu: NSMenu!
     
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let dockerApi = Docker()
     
     override func awakeFromNib() {
@@ -28,10 +28,10 @@ class StatusMenuController: NSObject {
     }
     
     @IBAction func quitClicked(_ sender: NSMenuItem) {
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     
-    func dockerPs() {
+    @objc func dockerPs() {
         let images = dockerApi.dockerImages()
         removeAllImageItems()
         addMenuItems(images)
